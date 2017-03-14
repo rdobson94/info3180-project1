@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% block main %}
+<form class="form" action="{{ url_for('userForm') }}" method="post" enctype="multipart/form-data">
+<h1 class="page-header">Create your Profile here</h1>
+<p>Fill in this form to create your profile</p>
+ <div class="form-group">
+    <label for="file">Upload your Profile Picture</label>
+    <input type="file" name="file" class="form-control" />
+  </div>
+
+
+    <div class="form-group">
+  <div class="clearfix"></div>
+  <div class="col-xs-4">
+    <label for="fname">Firstname <em>(Required)</em></p> </label>
+    <input type="Name" class="form-control" name="fname"placeholder="Enter Your Firstname" required="true">
+  </div>
+  <div class="form-group">
+  <div class="clearfix"></div>
+<div class="col-xs-4">
+    <label for="lname">Lastname <em>(Required)</em></label>
+    <input type="Name" class="form-control" name="lname" placeholder="Enter your Lastname" required='true'>
+  </div>
+  <div>
+    <div class="form-group">
+    <div class="clearfix"></div>
+   <div class="col-xs-4">
+    <label for="username">Username <em>(Required)</em></label>
+    <input type="Text" class="form-control" name="username" placeholder="Username" required='true'>
+  </div>
+  <div>
+    <div class="form-group">
+    <div class="clearfix"></div>
+   <div class="col-xs-4">
+    <label for="age">Age <em>(Required)</em></label>
+    <input type="number" class="form-control" name="age" placeholder="Age" required='true'>
+  </div>
+  <br>
+  <br>
+   <div class="form-group">
+        <div class="clearfix"></div>
+        <label class="col-xs-4 control-label">Gender</label>
+        <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="gender" value="male" /> Male
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="gender" value="female" /> Female
+                </label>
+              </div>
+            </div>
+  <div class="form-group">
+  <div class="clearfix"></div>
+  <label for="bio">Bio <em>(Required)</em></label>
+    <br>
+  <textarea name="bio" rows="5" cols="50" "Message" class="form-control" placeholder="Please,Enter Your Biography Here"></textarea>
+  </div>
+  <br>
+  <div class="form-group">  
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+</form>
+{% endblock %}
